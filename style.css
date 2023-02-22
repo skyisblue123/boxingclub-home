@@ -168,6 +168,20 @@ html {
     top: 53%;
   }
 }
+ @media(max-width:576px){
+    .wrap .carousel-caption .line-1 {
+        font-size: 20px;
+        top: 18%;
+      }
+    .wrap .carousel-caption .line-2 {
+        font-size: 15px;
+        top: 23%;
+      }
+     .wrap .carousel-caption .line-3 {
+        font-size: 15px;
+        top: 29%;
+      }
+    }
 .wrap .footer {
   background: #222;
   color: #fff;
