@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC&display=swap");
+html {
+  font-family: "Noto Sans SC", sans-serif;
+}
+.column {
+  background: #fff;
+  width: 20%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 1%;
+  .logo {
+    display: block;
+    background: url(https://i.postimg.cc/VkkZJ7Y9/logo.png) no-repeat 50% 0 /
+      contain;
+    width: 100%;
+    height: 30%;
+    text-indent: 101%; /*首行縮排*/
+    overflow: hidden;
+  }
+  .style {
+    text-align: center;
+    font-size: 14px;
+    .list {
+      margin: 75px 0 190px;
+      a {
+        display: block;
+        font-weight: bold;
+        color: #787878;
+        padding: 15px 0;
+        text-decoration: none;
+      }
+      :hover {
+        color: #3d3d3d;
+      }
+      :focus {
+        color: #8751a0;
+      }
+    }
+    .text {
+      color: #787878;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .column {
+    display: none;
+  }
+}
+
+.wrap {
+  margin-left: 20%;
+  .head {
+    display: none;
+    label,
+    input {
+      display: none;
+    }
+  }
+  @media (max-width: 1100px) {
+    .head {
+      display: block;
+      position: fixed;
+      z-index: 100; /*head蓋在輪播上*/
+      right: 0;
+      left: 0;
+      padding: 3% 5% 0;
+      .logo {
+        display: block;
+        background: url(https://i.postimg.cc/VkkZJ7Y9/logo.png) #fff no-repeat 0 /
+          contain;
+        width: 85px;
+        height: 95px;
+        text-indent: 101%; /*首行縮排*/
+        overflow: hidden;
+        z-index: 100;
+      }
+      ul {
+        max-height: 0;
+        overflow: hidden;
+        transition: 1s;
+        position: absolute;
+        z-index: 100;
+        top: 125px;
+        right: 0;
+        left: 0;
+        flex-direction: column;
+        background: #232323;
+        li {
+          border-bottom: 1px solid #303030;
+          margin: 0 auto;
+          width: 90%;
+          padding: 25px;
+        }
+        a {
+          font-size: 14px;
+          font-weight: bold;
+          color: #aaa;
+          text-decoration: none;
+        }
+        a:hover {
+          color: #fff;
+        }
+        a:focus {
+          color: #fff;
+        }
+      }
+      label {
+        display: block;
+        cursor: pointer;
+        height: 44px;
+        position: fixed;
+        z-index: 100;
+        right: 5%;
+        top: 5%;
+        .fa-bars {
+          font-size: 45px;
+          color: #fff;
+        }
+      }
+      input:checked ~ ul {
+        max-height: 500px;
+      }
+    }
+  }
+  /*輪播*/
+  .carousel-caption {
+    font-weight: bold;
+    .line {
+      position: fixed;
+      right: 0;
+      left: 20%;
+    }
+    .line-1 {
+      font-size: 70px;
+      top: 25%;
+    }
+    .line-2 {
+      font-size: 47px;
+      top: 40%;
+    }
+    .line-3 {
+      font-size: 17px;
+      top: 68%;
+    }
+  }
+  @media (max-width: 1100px) {
+    .carousel-caption {
+      .line {
+        right: 0;
+        left: 0;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    .carousel-caption {
+      .line-1 {
+        font-size: 50px;
+      }
+      .line-2 {
+        font-size: 40px;
+      }
+      .line-3 {
+        font-size: 15px;
+        top: 53%;
+      }
+    }
+  }
+  @media(max-width:576px){
+     .carousel-caption {
+      .line-1 {
+        font-size: 20px;
+        top: 18%;
+      }
+      .line-2 {
+        font-size: 15px;
+        top: 23%;
+      }
+      .line-3 {
+        font-size: 15px;
+        top: 29%;
+      }
+    }
+  }
+  .footer {
+    background: #222;
+    color: #fff;
+    font-size: 14px;
+    padding: 25px 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .wrap {
+    margin: 0;
+  }
+}
